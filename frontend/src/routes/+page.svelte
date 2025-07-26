@@ -4,11 +4,12 @@
 	import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
+	import { Zap, Palette, Database, Plus, Minus, Home, BarChart3, Settings } from '@lucide/svelte';
 	
 	let count = 0;
 	
 	onMount(() => {
-		console.log('Nexus Frontend loaded with SvelteKit + TailwindCSS + shadcn/ui');
+		console.log('Nexus Frontend loaded with SvelteKit + TailwindCSS + shadcn/ui + Lucide icons');
 	});
 </script>
 
@@ -65,9 +66,7 @@
 			<Card>
 				<CardHeader>
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-						</svg>
+						<Zap class="w-6 h-6 text-primary" />
 					</div>
 					<CardTitle>Lightning Fast</CardTitle>
 					<CardDescription>Built with SvelteKit for optimal performance and user experience.</CardDescription>
@@ -77,9 +76,7 @@
 			<Card>
 				<CardHeader>
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
-						</svg>
+						<Palette class="w-6 h-6 text-primary" />
 					</div>
 					<CardTitle>Modern Design</CardTitle>
 					<CardDescription>Beautiful UI components styled with shadcn/ui and TailwindCSS.</CardDescription>
@@ -89,9 +86,7 @@
 			<Card>
 				<CardHeader>
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-						</svg>
+						<Database class="w-6 h-6 text-primary" />
 					</div>
 					<CardTitle>Robust Backend</CardTitle>
 					<CardDescription>Powered by PostgreSQL and GraphQL for scalable data management.</CardDescription>
@@ -107,23 +102,21 @@
 			</CardHeader>
 			<CardContent>
 				<div class="flex items-center justify-center space-x-4 mb-4">
-					<Button 
-						variant="outline" 
-						size="icon"
+					<button 
+						class="w-10 h-10 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg transition-colors flex items-center justify-center"
 						on:click={() => count--}
 					>
 						-
-					</Button>
+					</button>
 					<Badge variant="secondary" class="text-2xl font-bold min-w-[3rem]">
 						{count}
 					</Badge>
-					<Button 
-						variant="outline" 
-						size="icon"
+					<button 
+						class="w-10 h-10 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg transition-colors flex items-center justify-center"
 						on:click={() => count++}
 					>
 						+
-					</Button>
+					</button>
 				</div>
 			</CardContent>
 		</Card>
