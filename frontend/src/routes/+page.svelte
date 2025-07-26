@@ -28,9 +28,18 @@
 					<Badge variant="outline">shadcn/ui</Badge>
 				</div>
 				<nav class="hidden md:flex items-center space-x-8">
-					<a href="/dashboard" class="text-gray-600 hover:text-primary-600 transition-colors">Dashboard</a>
-					<a href="/analytics" class="text-gray-600 hover:text-primary-600 transition-colors">Analytics</a>
-					<a href="/settings" class="text-gray-600 hover:text-primary-600 transition-colors">Settings</a>
+					<a href="/dashboard" class="text-gray-600 hover:text-primary-600 transition-colors flex items-center space-x-2">
+						<Home class="w-4 h-4" />
+						<span>Dashboard</span>
+					</a>
+					<a href="/analytics" class="text-gray-600 hover:text-primary-600 transition-colors flex items-center space-x-2">
+						<BarChart3 class="w-4 h-4" />
+						<span>Analytics</span>
+					</a>
+					<a href="/settings" class="text-gray-600 hover:text-primary-600 transition-colors flex items-center space-x-2">
+						<Settings class="w-4 h-4" />
+						<span>Settings</span>
+					</a>
 					<Avatar>
 						<AvatarImage src="https://github.com/shadcn.png" alt="User" />
 						<AvatarFallback>U</AvatarFallback>
@@ -106,7 +115,7 @@
 						class="w-10 h-10 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg transition-colors flex items-center justify-center"
 						on:click={() => count--}
 					>
-						-
+						<Minus class="w-4 h-4" />
 					</button>
 					<Badge variant="secondary" class="text-2xl font-bold min-w-[3rem]">
 						{count}
@@ -115,7 +124,7 @@
 						class="w-10 h-10 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg transition-colors flex items-center justify-center"
 						on:click={() => count++}
 					>
-						+
+						<Plus class="w-4 h-4" />
 					</button>
 				</div>
 			</CardContent>
