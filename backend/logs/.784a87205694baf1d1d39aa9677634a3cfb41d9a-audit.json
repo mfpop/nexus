@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Volumes/Crucial-P310/nexus/backend/logs/.784a87205694baf1d1d39aa9677634a3cfb41d9a-audit.json",
+    "files": [
+        {
+            "date": 1753552975682,
+            "name": "/Volumes/Crucial-P310/nexus/backend/logs/mcp-puppeteer-2025-07-26.log",
+            "hash": "46a1a027bd451aeef012e734b127a86ce6cb14418fd42cc8baa13bdd4c56d39d"
+        }
+    ],
+    "hashType": "sha256"
+}

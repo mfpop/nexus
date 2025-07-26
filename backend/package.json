@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A robust Django backend with GraphQL API and PostgreSQL database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@henkey/postgres-mcp-server": "^1.0.5",
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "@modelcontextprotocol/server-filesystem": "^2025.7.1",
+    "@modelcontextprotocol/server-memory": "^2025.4.25",
+    "@wonderwhy-er/desktop-commander": "^0.2.7",
+    "claude-talk-to-figma-mcp": "^0.6.0",
+    "github-mcp-custom": "^1.0.20",
+    "puppeteer-mcp-server": "^0.7.2",
+    "tavily-mcp": "^0.2.9"
+  },
+  "devDependencies": {
+    "svelte-check": "^4.3.0"
+  }
+}

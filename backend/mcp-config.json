@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "MCP_SERVER_FILESYSTEM_ROOT": "."
+      }
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"],
+      "env": {
+        "MCP_SERVER_MEMORY_DATA_DIR": "./mcp-memory"
+      }
+    },
+    "browser": {
+      "command": "npx",
+      "args": ["puppeteer-mcp-server"],
+      "env": {}
+    },
+    "github": {
+      "command": "npx",
+      "args": ["github-mcp-custom"],
+      "env": {}
+    },
+
+    "postgres": {
+      "command": "npx",
+      "args": ["@henkey/postgres-mcp-server"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "postgresql://nexus_user:nexus_password@localhost:5432/nexus_db"
+      }
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["claude-talk-to-figma-mcp"],
+      "env": {}
+    },
+    "web-search": {
+      "command": "npx",
+      "args": ["tavily-mcp"],
+      "env": {}
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["@wonderwhy-er/desktop-commander"],
+      "env": {}
+    }
+  }
+} 
